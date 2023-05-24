@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro de Cumpleaños</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8e9d5;
+      padding: 20px;
+    }
+    .birthday-container {
+      background-color: #f9ece9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .birthday-container h2 {
+      margin-bottom: 20px;
+    }
+    .birthday-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .birthday-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .birthday-item button {
+      margin-left: 10px;
+    }
+    .birthday-form {
+      margin-top: 20px;
+    }
+    .image-container {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Registro de Cumpleaños</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form id="birthdayForm" class="birthday-form">
+          <div class="form-group">
+            <label for="nameInput">Nombre:</label>
+            <input type="text" class="form-control" id="nameInput" required>
+          </div>
+          <div class="form-group">
+            <label for="birthdayInput">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="birthdayInput" required>
+          </div>
+          <div class="form-group">
+            <label for="imageInput">Imagen:</label>
+            <input type="file" class="form-control" id="imageInput" accept="image/*" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar Cumpleaños</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="birthday-container">
+          <h2>Cumpleaños Agregados</h2>
+          <ul id="birthdayList" class="birthday-list">
+            <!-- Aquí se agregarán los cumpleaños -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>

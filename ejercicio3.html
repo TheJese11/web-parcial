@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registro de Roles</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Registro de Roles</h1>
+    <form id="registroForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" class="form-control" id="usuario" required>
+      </div>
+      <div class="form-group">
+        <label for="rol">Rol:</label>
+        <select class="form-control" id="rol">
+          <option>Jefe de Produccion</option>
+          <option>Gerente de Calidad</option>
+          <option>Ing de Sistemas</option>
+          <option>Jefe de Marketing</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Estado:</label><br>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-success active">
+            <input type="radio" name="estado" value="Activo" checked> Activo
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="estado" value="Inactivo"> Inactivo
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fechaLimite">Fecha Límite de Acceso:</label>
+        <input type="date" class="form-control" id="fechaLimite" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Nombre de Usuario</th>
+          <th>Rol</th>
+          <th>Estado</th>
+          <th>Fecha Límite de Acceso</th>
+          <th>Fecha de Registro</th>
+          <th>Días Restantes de Acceso</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="rolesTabla">
+        <!-- Aquí se insertarán los registros -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script3.js">
+  </script>
+</html>
+  
